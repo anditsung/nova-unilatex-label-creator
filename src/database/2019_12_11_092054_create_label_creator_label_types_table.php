@@ -18,6 +18,9 @@ class CreateLabelCreatorLabelTypesTable extends Migration
             $table->string('name');
             $table->text('design');
             $table->text('attributes');
+            $table->integer('number_digits');
+            $table->integer('columns');
+            $table->integer('break_count');
             $table->unsignedBigInteger('user_id');
             $table->timestamps();
         });

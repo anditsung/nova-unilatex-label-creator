@@ -13,16 +13,7 @@
     $columnThree = "left";
     $labelCount = 1;
 
-    $breakCount = 0;
-    if($label_type->columns == 1) {
-        $breakCount = 4;
-    }
-    else if($label_type->columns == 2) {
-        $breakCount = 8;
-    }
-    else if($label_type->columns == 3) {
-        $breakCount = 12;
-    }
+    $breakCount = $label_type->break_count;
 
     $barcode = "";
     $plant = "";
@@ -46,7 +37,7 @@
 
                 $design = $label_type->design;
 
-                while(strlen($number) < $label_type->numbers_digit) {
+                while(strlen($number) < $label_type->number_digits) {
                     $number = "0" . $number;
                 }
 

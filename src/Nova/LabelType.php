@@ -63,7 +63,8 @@ class LabelType extends Resource
                 ])
                 ->hideFromIndex(),
 
-            Number::make('Numbers Digit')
+            Number::make('Number Digits')
+                ->min(1)
                 ->max(3)
                 ->rules('required')
                 ->hideFromIndex(),
@@ -74,6 +75,11 @@ class LabelType extends Resource
                     2 => 2,
                     3 => 3
                 ])
+                ->rules('required')
+                ->hideFromIndex(),
+
+            Number::make('Break Count')
+                ->min(1)
                 ->rules('required')
                 ->hideFromIndex(),
 

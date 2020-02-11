@@ -15,8 +15,9 @@ class LabelType extends Model
     protected $fillable = [
         'name',
         'attributes',
-        'numbers_digit',
+        'number_digits',
         'columns',
+        'break_count',
         'design',
         'user_id',
     ];

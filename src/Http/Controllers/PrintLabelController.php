@@ -128,6 +128,7 @@ class PrintLabelController extends Controller
 
     private function validateData(NovaRequest $request)
     {
+        // cek number yang di input adalah angka
         $rules = collect($request->all())->map(function($value, $key) {
             return [$key => 'required'];
         })->toArray();
